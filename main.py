@@ -1,6 +1,3 @@
-import random
-import string
-
 import streamlit as stl
 import random as rd
 import string as str
@@ -41,7 +38,7 @@ def password_strength(password):
 
 def suggest_password():
     char = str.ascii_letters + str.digits + "!@#$%^&*"
-    return ''.join(random.choice(char)for _ in  range(12))
+    return ''.join(rd.choice(char)for _ in  range(12))
 
 stl.title("Password Strength Meter")
 password = stl.text_input("Enter Your Password", type="password")
